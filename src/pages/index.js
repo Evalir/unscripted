@@ -15,6 +15,26 @@ export default function Index(props) {
         css={`
           width: 100%;
           height: 100%;
+          form {
+            display: flex;
+            flex-direction: column;
+            label {
+              font-size: 1.6rem;
+            }
+            input {
+              border-radius: 4px;
+              height: 40px;
+            }
+            input[type="submit"] {
+              background: var(--yellow);
+              color: var(--black);
+              border: 0;
+              margin-top: 8px;
+            }
+            p > a {
+              font-size: 1.2rem;
+            }
+          }
         `}
       >
         <p>
@@ -35,26 +55,6 @@ export default function Index(props) {
           target="popupwindow"
           onsubmit="window.open('https://buttondown.email/unscripted.email', 'popupwindow')"
           class="embeddable-buttondown-form"
-          css={`
-            display: flex;
-            flex-direction: column;
-            label {
-              font-size: 1.6rem;
-            }
-            input {
-              border-radius: 4px;
-              height: 40px;
-            }
-            input[type="submit"] {
-              background: var(--yellow);
-              color: var(--black);
-              border: 0;
-              margin-top: 8px;
-            }
-            p > a {
-              font-size: 1.2rem;
-            }
-          `}
         >
           <label for="bd-email">Enter your email</label>
           <input type="email" name="email" id="bd-email" />
