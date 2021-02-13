@@ -5,6 +5,13 @@ import SafeLink from "../components/safeLink/safeLink";
 export default function Index(props) {
   const subscribed = props.location.search.includes("s=1");
 
+  function onSubmit() {
+    window.open("https://buttondown.email/unscripted.email", "popupwindow");
+    if (window.fathom) {
+      window.fathom.trackGoal("37VNXMRC", 0);
+    }
+  }
+
   return subscribed ? (
     <>
       <p>Subscription confirmed! Sent the latest issue to your inbox.</p>
@@ -53,7 +60,7 @@ export default function Index(props) {
           action="https://buttondown.email/api/emails/embed-subscribe/unscripted.email"
           method="post"
           target="popupwindow"
-          onsubmit="window.open('https://buttondown.email/unscripted.email', 'popupwindow')"
+          onsubmit={onSubmit}
           class="embeddable-buttondown-form"
         >
           <label for="bd-email">Enter your email</label>
