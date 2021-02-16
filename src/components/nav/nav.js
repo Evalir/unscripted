@@ -1,8 +1,8 @@
-import * as React from 'react'
-import { Link } from 'gatsby'
-import 'styled-components/macro'
-import { breakpoint } from '../../lib/breakpoints'
-import SafeLink from '../safeLink/safeLink'
+import * as React from "react";
+import { Link } from "gatsby";
+import "styled-components/macro";
+import { breakpoint } from "../../lib/breakpoints";
+import SafeLink from "../safeLink/safeLink";
 
 export default function Nav() {
   return (
@@ -10,7 +10,7 @@ export default function Nav() {
       css={`
         display: flex;
         flex-direction: column;
-        ${breakpoint('small', `flex-direction: row;`)}
+        ${breakpoint("small", `flex-direction: row;`)}
         margin-bottom: 4.2rem;
 
         a:not(:first-child) {
@@ -32,7 +32,7 @@ export default function Nav() {
       <div
         css={`
           margin-top: 2rem;
-          ${breakpoint('small', `margin-top: 0rem;`)}
+          ${breakpoint("small", `margin-top: 0rem;`)}
         `}
       >
         <Link to="/blog">Blog</Link>
@@ -41,5 +41,5 @@ export default function Nav() {
         <Link to="/more">More</Link>
       </div>
     </nav>
-  )
+  );
 }

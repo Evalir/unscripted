@@ -1,8 +1,8 @@
-import React from 'react'
-import { Helmet } from 'react-helmet'
-import 'styled-components/macro'
-import GlobalStyles from '../../global-styles'
-import Typography from '../../typography'
+import React from "react";
+import { Helmet } from "react-helmet";
+import "styled-components/macro";
+import GlobalStyles from "../../global-styles";
+import Typography from "../../typography";
 
 export default function Layout({ children }) {
   return (
@@ -21,5 +21,5 @@ export default function Layout({ children }) {
       <Typography />
       {children}
     </div>
-  )
+  );
 }

@@ -1,5 +1,5 @@
-import * as React from 'react'
-import { Link } from 'gatsby'
+import * as React from "react";
+import { Link } from "gatsby";
 
 export default function NotFound() {
   return (
@@ -7,14 +7,14 @@ export default function NotFound() {
       <title>Not found</title>
       <h1>Page not found</h1>
       <p>
-        Sorry{' '}
+        Sorry{" "}
         <span role="img" aria-label="Pensive emoji">
           😔
-        </span>{' '}
+        </span>{" "}
         I couldn’t find what you were looking for. This is a living site, so it
         might get added later. :)
         <br />
-        {process.env.NODE_ENV === 'development' ? (
+        {process.env.NODE_ENV === "development" ? (
           <>
             <br />
             Try creating a page in <code>src/pages/</code>.
@@ -25,5 +25,5 @@ export default function NotFound() {
         <Link to="/">Go home, wanderer</Link>.
       </p>
     </main>
-  )
+  );
 }
