@@ -4,6 +4,7 @@ import SafeLink from "../components/safeLink/safeLink";
 
 export default function Index(props) {
   const subscribed = props.location.search.includes("s=1");
+  const confirmed = props.location.search.includes("confirmed");
 
   function onSubmit() {
     window.open("https://buttondown.email/unscripted.email", "popupwindow");
@@ -12,11 +13,25 @@ export default function Index(props) {
     }
   }
 
-  return subscribed ? (
-    <>
-      <p>Subscription confirmed! Sent the latest issue to your inbox.</p>
-    </>
-  ) : (
+  if (confirmed) {
+    return (
+      <>
+        <p>Subscription confirmed! Sent the latest issue to your inbox.</p>
+      </>
+    );
+  }
+
+  if (subscribed) {
+    return (
+      <>
+        <p>
+          Halfway there! Now, go to your inbox, and confirm your subscription.
+        </p>
+      </>
+    );
+  }
+
+  return (
     <>
       <main
         css={`
